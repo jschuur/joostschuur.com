@@ -1,0 +1,19 @@
+{
+  "name": "joostschuurdotcom",
+  "version": "0.1.0",
+  "description": "Joost Schuur's personal site",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "git push && cfcli purge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschuur/jschuur.github.io.git"
+  },
+  "author": "Joost Schuur <jschuur@jschuur.com> (http://joostschuur.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jschuur/jschuur.github.io/issues"
+  },
+  "homepage": "https://joostschuur.com"
+}
