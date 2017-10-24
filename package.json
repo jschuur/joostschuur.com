@@ -4,7 +4,7 @@
   "description": "Joost Schuur's personal site",
   "main": "dist/index.html",
   "scripts": {
-    "deploy": "aws s3 sync dist/ s3://com.joostschuur"
+    "deploy": "aws s3 sync dist/ s3://joostschuur.com"
   },
   "repository": {
     "type": "git",
