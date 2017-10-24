@@ -4,7 +4,7 @@
   "description": "Joost Schuur's personal site",
   "main": "index.html",
   "scripts": {
-    "deploy": "git push && cfcli purge"
+    "deploy": "aws s3 sync dist/ s3://com.joostschuur.www"
   },
   "repository": {
     "type": "git",
