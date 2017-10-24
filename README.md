@@ -1,2 +1,1 @@
-# jschuur.github.io
-Personal site
+[Personal site](http://joostschuur.com)

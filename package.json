@@ -2,18 +2,18 @@
   "name": "joostschuurdotcom",
   "version": "0.1.0",
   "description": "Joost Schuur's personal site",
-  "main": "index.html",
+  "main": "dist/index.html",
   "scripts": {
-    "deploy": "aws s3 sync dist/ s3://com.joostschuur.www"
+    "deploy": "aws s3 sync dist/ s3://com.joostschuur"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jschuur/jschuur.github.io.git"
+    "url": "git+https://github.com/jschuur/joostschuur.com.git"
   },
   "author": "Joost Schuur <jschuur@jschuur.com> (http://joostschuur.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jschuur/jschuur.github.io/issues"
+    "url": "https://github.com/jschuur/joostschuur.com/issues"
   },
   "homepage": "https://joostschuur.com"
 }
