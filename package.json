@@ -1,0 +1,21 @@
+{
+  "name": "joostschuur.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:site": "yarn workspace @joostschuur/site dev",
+    "dev:cms": "yarn workspace @joostschuur/cms dev",
+    "dev": "concurrently yarn:dev:*"
+  },
+  "keywords": [],
+  "author": "Joost Schuur <jschuur@jschuur.com",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}
