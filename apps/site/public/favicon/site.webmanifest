@@ -1,0 +1,8 @@
+{
+  "name": "Joost Schuur's Personal Site",
+  "short_name": "Joost Schuur",
+  "start_url": "https://joostschuur.com",
+  "theme_color": "#faebd7",
+  "background_color": "#faebd7",
+  "display": "standalone"
+}
