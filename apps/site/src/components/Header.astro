@@ -1,26 +1,26 @@
 ---
-import DarkModeToggle from "./DarkModeToggle.astro";
-import HeaderLink from "./HeaderLink.astro";
+import DarkModeToggle from './DarkModeToggle.astro';
+import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
   <a
-    class="unset absolute z-10 left-[50%] -top-[100rem] translate-x-[-50%] bg-white text-black px-8 py-2 focus:top-[initial]"
-    href="#main"
+    class='unset absolute z-10 left-[50%] -top-[100rem] translate-x-[-50%] bg-white text-black px-8 py-2 focus:top-[initial]'
+    href='#main'
   >
     Skip to content
   </a>
   <nav>
-    <section>
-      <ul class="unset font-header flex gap-4 [&>li]:p-0">
-        <li class="grow"><HeaderLink href="/">Joost Schuur</HeaderLink></li>
-        <li><HeaderLink href="/blog">Blog</HeaderLink></li>
-        <li><HeaderLink href="/projects">Projects</HeaderLink></li>
+    <section class='text-sm sm:text-base'>
+      <ul class='unset font-header flex gap-4 [&>li]:p-0'>
+        <li class='grow'><HeaderLink href='/'>Joost Schuur</HeaderLink></li>
+        <li><HeaderLink href='/blog'>Blog</HeaderLink></li>
+        <li><HeaderLink href='/projects'>Projects</HeaderLink></li>
       </ul>
     </section>
   </nav>
   <div
-    class="max-[375px]:hidden justify-self-end py-2 flex items-center content-center text-text-bold"
+    class='max-[375px]:hidden justify-self-end py-2 flex items-center content-center text-text-bold'
   >
   </div>
   <DarkModeToggle />
@@ -30,9 +30,6 @@ import HeaderLink from "./HeaderLink.astro";
     grid-area: header;
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(
-        0,
-        max-content
-      );
+    grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(0, max-content);
   }
 </style>
