@@ -7,6 +7,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'turbo',
+    'prettier',
   ],
   ignorePatterns: ['dist', 'node_modules', '.sanity'],
   env: {

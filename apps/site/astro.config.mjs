@@ -1,3 +1,4 @@
+/* eslint-disable turbo/no-undeclared-env-vars */
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';

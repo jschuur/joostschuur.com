@@ -7,14 +7,18 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "format": "turbo run format"
   },
   "keywords": [],
   "author": "Joost Schuur <jschuur@jschuur.com",
   "license": "ISC",
   "devDependencies": {
-    "turbo": "^1.6.3",
-    "eslint-config-joostschuur": "1.0.0"
+    "eslint": "^8.30.0",
+    "eslint-config-joostschuur": "1.0.0",
+    "prettier": "^2.8.1",
+    "prettier-config-joostschuur": "1.0.0",
+    "turbo": "^1.6.3"
   },
   "workspaces": [
     "apps/*",
