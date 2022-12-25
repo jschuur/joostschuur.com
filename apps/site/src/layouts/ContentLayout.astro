@@ -42,7 +42,7 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
     <FontAwesome />
   </head>
 
-  <body class="min-h-screen text-text-body bg-bg-body max-w-4xl mx-auto px-6 sm:px-8">
+  <body class="text-text-body bg-bg-body max-w-4xl mx-auto px-6 sm:px-8">
     <Header />
     <main id="main">
       <section class="blog-post prose max-w-none prose-sleek">
@@ -54,6 +54,9 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
     <Footer />
     <style>
       body {
+        min-height: 100vh;
+        min-height: 100svh;
+
         display: grid;
         grid-template-areas:
           'header'
