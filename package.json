@@ -6,15 +6,18 @@
   "private": true,
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "lint": "turbo run lint"
   },
   "keywords": [],
   "author": "Joost Schuur <jschuur@jschuur.com",
   "license": "ISC",
   "devDependencies": {
-    "turbo": "^1.6.3"
+    "turbo": "^1.6.3",
+    "eslint-config-joostschuur": "1.0.0"
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ]
 }

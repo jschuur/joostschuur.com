@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint": "eslint .",
     "clean": "rm -rf dist"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
+    "eslint-config-joostschuur": "1.0.0",
     "prettier-plugin-astro": "^0.7.0"
   }
 }
