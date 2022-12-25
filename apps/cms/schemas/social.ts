@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'social',
@@ -37,7 +37,7 @@ export default defineType({
       name: 'link',
       title: 'Link',
       type: 'url',
-      validation: (Rule) =>
+      validation: Rule =>
         Rule.uri({
           scheme: ['http', 'https', 'mailto'],
         }),
@@ -55,4 +55,4 @@ export default defineType({
       hidden: true,
     }),
   ],
-})
+});

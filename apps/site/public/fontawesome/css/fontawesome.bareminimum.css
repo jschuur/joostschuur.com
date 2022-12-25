@@ -4,7 +4,7 @@
   instead of this file.
 */
 .fa {
-  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-family: var(--fa-style-family, 'Font Awesome 6 Free');
   font-weight: var(--fa-style, 900);
 }
 
@@ -126,7 +126,7 @@
   padding-left: 0;
 }
 
-.fa-ul>li {
+.fa-ul > li {
   position: relative;
 }
 
@@ -157,23 +157,23 @@
 }
 
 .fa-up-right-from-square::before {
-  content: "\f35d";
+  content: '\f35d';
 }
 
 .fa-link::before {
-  content: "\f0c1";
+  content: '\f0c1';
 }
 
 .fa-hashtag::before {
-  content: "\23";
+  content: '\23';
 }
 
 .fa-bars::before {
-  content: "\f0c9";
+  content: '\f0c9';
 }
 
 .fa-xmark::before {
-  content: "\f00d";
+  content: '\f00d';
 }
 
 .sr-only,

@@ -7,29 +7,30 @@
 */
 
 // Import the global.css file here so that it is included on
-import "../styles/global.css";
-import "../styles/theme.css";
+import '../styles/global.css';
+import '../styles/theme.css';
 
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Favicon from "./Favicon.astro";
-import FontAwesome from "./FontAwesome.astro";
-import GoogleFont from "./GoogleFont.astro";
-import ThemeScript from "./ThemeScript.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Favicon from './Favicon.astro';
+import FontAwesome from './FontAwesome.astro';
+import GoogleFont from './GoogleFont.astro';
+import ThemeScript from './ThemeScript.astro';
 ---
 
 <!DOCTYPE html>
 <html class="theme-sleek" lang="en">
   <head>
     <!-- Google Analytics -->
-    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-3GLM22RF0C"></script>
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-3GLM22RF0C"
+    ></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-3GLM22RF0C");
+      gtag('js', new Date());
+      gtag('config', 'G-3GLM22RF0C');
     </script>
 
     <link rel="alternate" type="application/rss+xml" title="Joost Schuur" href="/feed.xml" />
@@ -44,9 +45,7 @@ import ThemeScript from "./ThemeScript.astro";
     <FontAwesome />
   </head>
 
-  <body
-    class="min-h-screen text-text-body bg-bg-body max-w-3xl mx-auto px-6 sm:px-8"
-  >
+  <body class="min-h-screen text-text-body bg-bg-body max-w-3xl mx-auto px-6 sm:px-8">
     <Header />
     <main id="main">
       <slot name="main" />
@@ -56,9 +55,9 @@ import ThemeScript from "./ThemeScript.astro";
       body {
         display: grid;
         grid-template-areas:
-          "header"
-          "main"
-          "footer";
+          'header'
+          'main'
+          'footer';
         grid-template-rows: 5rem minmax(0, 1fr) 5rem;
         grid-template-columns: minmax(0, 1fr);
       }

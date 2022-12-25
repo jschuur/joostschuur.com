@@ -1,18 +1,16 @@
 ---
-import { readAll } from "../lib/markdoc/read";
+import { readAll } from '../lib/markdoc/read';
 
-import PageMeta from "../components/PageMeta.astro";
-import { SITE_TITLE } from "../config";
-import PageLayout from "../layouts/PageLayout.astro";
+import PageMeta from '../components/PageMeta.astro';
+import { SITE_TITLE } from '../config';
+import PageLayout from '../layouts/PageLayout.astro';
 
 const projects = await readAll({
-  directory: "projects",
+  directory: 'projects',
 });
 
 const sortedProjects = projects.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
+  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 );
 ---
 
@@ -21,30 +19,22 @@ const sortedProjects = projects.sort(
   <section slot="main">
     <ul>
       {
-        sortedProjects.map((project) => {
-          const formattedDate = new Date(
-            project.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
+        sortedProjects.map(project => {
+          const formattedDate = new Date(project.frontmatter.date).toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
           });
           return (
             <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3">
               <div class="title">
-                <a
-                  href={project.frontmatter.url}
-                  target="_blank"
-                  class="hover:text-text-link"
-                >
+                <a href={project.frontmatter.url} target="_blank" class="hover:text-text-link">
                   <span>{project.frontmatter.title}</span>
-                </a>:
-                  <span>{project.frontmatter.description}</span>
+                </a>
+                :<span>{project.frontmatter.description}</span>
               </div>
               <div class="text-text-muted text-sm italic">
-                <time datetime={project.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
+                <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
               </div>
             </li>
           );

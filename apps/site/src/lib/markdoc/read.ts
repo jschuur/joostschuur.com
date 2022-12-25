@@ -1,12 +1,12 @@
-import path from "path";
-import { globby } from "globby";
-import type { RenderableTreeNode } from "@markdoc/markdoc";
-import { parseAndTransform } from "./transform";
-import { validateBlogFrontmatter } from "./blog/frontmatter";
-import { validateProjectFrontmatter } from "./project/frontmatter";
+import path from 'path';
+import { globby } from 'globby';
+import type { RenderableTreeNode } from '@markdoc/markdoc';
+import { parseAndTransform } from './transform';
+import { validateBlogFrontmatter } from './blog/frontmatter';
+import { validateProjectFrontmatter } from './project/frontmatter';
 
 // path is relative to where you run the `yarn build` command
-const pathToContentDir = path.normalize("./content");
+const pathToContentDir = path.normalize('./content');
 
 type Content = {
   path: string;
@@ -28,11 +28,11 @@ type ReturnTypeForProjects = Content & {
 */
 /* Overloads for readAll - start */
 export async function readAll(args: {
-  directory: "blog";
+  directory: 'blog';
   excludeDrafts?: boolean;
 }): Promise<ReturnTypeForBlog[]>;
 export async function readAll(args: {
-  directory: "projects";
+  directory: 'projects';
   excludeDrafts?: boolean;
 }): Promise<ReturnTypeForProjects[]>;
 /* Overloads for readAll - end */
@@ -47,37 +47,35 @@ export async function readAll({
   const pathToDir = path.join(pathToContentDir, directory);
   const paths = await globby(`${pathToDir}/*.md`);
 
-  const files = await Promise.all(
-    paths.map((path) => parseAndTransform({ path }))
-  );
+  const files = await Promise.all(paths.map(path => parseAndTransform({ path })));
 
-  if (directory === "blog") {
+  if (directory === 'blog') {
     const content = files
-      .map((file) => {
+      .map(file => {
         return {
           ...file,
           frontmatter: validateBlogFrontmatter(file.frontmatter),
         };
       })
-      .filter((c) => (excludeDrafts ? c.frontmatter.draft !== true : true));
+      .filter(c => (excludeDrafts ? c.frontmatter.draft !== true : true));
     return content;
   }
 
-  if (directory === "projects") {
+  if (directory === 'projects') {
     const content = files
-      .map((file) => {
+      .map(file => {
         return {
           ...file,
           frontmatter: validateProjectFrontmatter(file.frontmatter),
         };
       })
-      .filter((c) => (excludeDrafts ? c.frontmatter.draft !== true : true));
+      .filter(c => (excludeDrafts ? c.frontmatter.draft !== true : true));
 
     return content;
   }
 
   throw new Error(
-    "type should be one of the available types in ContentDirectory. If you are adding a new directory in Content, then please make sure you include it in ContentType for strong frontmatter type."
+    'type should be one of the available types in ContentDirectory. If you are adding a new directory in Content, then please make sure you include it in ContentType for strong frontmatter type.'
   );
 }
 
@@ -87,22 +85,16 @@ export async function readAll({
 */
 /* Overloads for readOne - start */
 export async function readOne(args: {
-  directory: "blog";
+  directory: 'blog';
   filename: string;
 }): Promise<ReturnTypeForBlog>;
 export async function readOne(args: {
-  directory: "projects";
+  directory: 'projects';
   filename: string;
 }): Promise<ReturnTypeForProjects>;
 /* Overloads for readOne - end */
 
-export async function readOne({
-  directory,
-  filename,
-}: {
-  directory: string;
-  filename: string;
-}) {
+export async function readOne({ directory, filename }: { directory: string; filename: string }) {
   const pathToDir = path.join(pathToContentDir, directory);
   const absolutePath = path.join(pathToDir, filename);
 
@@ -115,7 +107,7 @@ export async function readOne({
     path: absolutePath,
   });
 
-  if (directory === "blog") {
+  if (directory === 'blog') {
     return {
       content,
       frontmatter: validateBlogFrontmatter(frontmatter),
@@ -123,7 +115,7 @@ export async function readOne({
       slug,
     };
   }
-  if (directory === "projects") {
+  if (directory === 'projects') {
     return {
       content,
       frontmatter: validateProjectFrontmatter(frontmatter),
@@ -133,6 +125,6 @@ export async function readOne({
   }
 
   throw new Error(
-    "type should be one of the available types in ContentType. If you are adding a new directory in Content, then please make sure you include it in ContentType for stronger frontmatter type."
+    'type should be one of the available types in ContentType. If you are adding a new directory in Content, then please make sure you include it in ContentType for stronger frontmatter type.'
   );
 }

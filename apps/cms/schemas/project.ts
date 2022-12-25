@@ -21,9 +21,9 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
-      name: "active",
-      title: "Active",
-      type: "boolean",
+      name: 'active',
+      title: 'Active',
+      type: 'boolean',
       initialValue: true,
     }),
     defineField({
@@ -32,9 +32,9 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      name: "order",
-      title: "Order",
-      type: "number",
+      name: 'order',
+      title: 'Order',
+      type: 'number',
       hidden: true,
     }),
   ],
