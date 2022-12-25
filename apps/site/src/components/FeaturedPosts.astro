@@ -1,0 +1,19 @@
+---
+import { readAll } from '../lib/markdoc/read';
+import PostList from './PostList.astro';
+
+const posts = await readAll({
+  directory: 'blog',
+});
+
+const featuredPosts = posts
+  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+  .filter(post => post.frontmatter.featured === true)
+  .slice(0, 3);
+---
+
+<section class="mb-8">
+  <h2 class="text-xl font-bold mb-4">Featured Posts</h2>
+
+  <PostList posts={featuredPosts} />
+</section>

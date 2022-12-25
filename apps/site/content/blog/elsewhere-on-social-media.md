@@ -2,7 +2,7 @@
 author: Joost Schuur
 date: 2022-11-18
 title: Elsewhere on social media
-featured: false
+featured: true
 draft: false
 tags:
   - social-media
