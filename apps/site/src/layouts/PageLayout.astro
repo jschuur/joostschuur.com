@@ -7,6 +7,7 @@
 */
 
 // Import the global.css file here so that it is included on
+import { GOOGLE_ANALYTICS_ID } from '../config';
 import '../styles/global.css';
 import '../styles/theme.css';
 
@@ -22,15 +23,17 @@ import ThemeScript from './ThemeScript.astro';
 <html class="theme-sleek" lang="en">
   <head>
     <!-- Google Analytics -->
-    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-3GLM22RF0C"
+    <script
+      type="text/partytown"
+      src={`https://www.googletagmanager.com/gtag/js?${GOOGLE_ANALYTICS_ID}`}
     ></script>
-    <script type="text/partytown">
+    <script define:vars={{ GOOGLE_ANALYTICS_ID }} type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', 'G-3GLM22RF0C');
+      gtag('config', GOOGLE_ANALYTICS_ID);
     </script>
 
     <link rel="alternate" type="application/rss+xml" title="Joost Schuur" href="/feed.xml" />

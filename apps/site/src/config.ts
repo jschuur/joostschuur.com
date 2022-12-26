@@ -6,6 +6,7 @@ export const SITE_DESCRIPTION =
   'JavaScript, product developemt, workflow tools, content curation and more.';
 export const TWITTER_HANDLE = '@joostschuur';
 export const MY_NAME = 'Joost Schuur';
+export const GOOGLE_ANALYTICS_ID = 'G-3GLM22RF0C';
 
 // setup in astro.config.mjs
 const BASE_URL = new URL(import.meta.env.SITE);
