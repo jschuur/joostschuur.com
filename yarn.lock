@@ -2565,6 +2565,14 @@ astro-markdoc-renderer@0.0.1-alpha.0:
     "@markdoc/markdoc" "^0.2.1"
     markdown-it "^13.0.1"
 
+astro-og-canvas@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/astro-og-canvas/-/astro-og-canvas-0.1.5.tgz#fb179a60a6e444b1afd3af2d07dedbe68c793f99"
+  integrity sha512-5fzA7pVRhlh4t4tuX73TwYsP9phb5S+UU1Hhzu/D5GsP3djwuDpw8sTLohIxxsKbvWErko4HCvU2qDMtCoX7KA==
+  dependencies:
+    canvaskit-wasm "^0.37.0"
+    entities "^4.4.0"
+
 astro@^1.7.1:
   version "1.7.2"
   resolved "https://registry.npmjs.org/astro/-/astro-1.7.2.tgz"
@@ -2858,6 +2866,11 @@ caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
   version "1.0.30001441"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001441.tgz"
   integrity sha512-OyxRR4Vof59I3yGWXws6i908EtGbMzVUi3ganaZQHmydk1iwDhRnvaPG2WaR0KcqrDFKrxVZHULT396LEPhXfg==
+
+canvaskit-wasm@^0.37.0:
+  version "0.37.2"
+  resolved "https://registry.yarnpkg.com/canvaskit-wasm/-/canvaskit-wasm-0.37.2.tgz#add4321d720cae23f895644ed8f45757e03d6011"
+  integrity sha512-212imazRF98gLOTiU4JAXM7xDvaknI7jaPtAg4ETXGW5rLQs6pomgIvVPUSfoKnQVTdGgzj+B4e+/u0Da20aGg==
 
 capture-stack-trace@^1.0.0:
   version "1.0.2"
