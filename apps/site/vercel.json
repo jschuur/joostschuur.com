@@ -1,0 +1,9 @@
+{
+  "buildCommand": "yarn build",
+  "redirects": [
+    {
+      "source": "/blog/quick-tip-deploy-only-modified-vercel-projects-in-a-turborepo-onorepo",
+      "destination": "/blog/quick-tip-deploy-only-modified-vercel-projects-in-a-turborepo-monorepo"
+    }
+  ]
+}
