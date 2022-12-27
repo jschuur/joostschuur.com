@@ -3,7 +3,7 @@ author: Joost Schuur
 date: 2022-11-18
 title: Elsewhere on social media
 description: 'Posting (occasionally) on Mastodon, plus some of my other social media links.'
-featured: true
+featured: false
 draft: false
 tags:
   - social-media

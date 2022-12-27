@@ -9,7 +9,7 @@ const posts = await readAll({
 const featuredPosts = posts
   .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
   .filter(post => post.frontmatter.featured === true)
-  .slice(0, 3);
+  .slice(0, 5);
 ---
 
 <section class="mb-8">

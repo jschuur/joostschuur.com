@@ -35,7 +35,7 @@ The solution to this problem came via a [tip on Twitter](https://twitter.com/lee
 
 When paired with Vercel hosting, it can [identify if a given workspace (app) has been modified](https://vercel.com/docs/concepts/monorepos/turborepo#using-turbo-ignore) since the last successful deploy based on the Turborepo dependency graph.
 
-I didn't actually have any build dependencies between the two apps, so the required `turbo.json` needed for a [basic Turboreport setup](https://turbo.build/repo/docs/getting-started/add-to-project) was pretty straightforward:
+I didn't actually have any build dependencies between the two apps, so the required `turbo.json` needed for a [basic Turborepo setup](https://turbo.build/repo/docs/getting-started/add-to-project) was pretty straightforward:
 
 ```
 {
