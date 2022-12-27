@@ -33,7 +33,17 @@ export default defineConfig({
   server: { port: SERVER_PORT },
   site: BASE_URL,
   integrations: [
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        // encourage search engines to index blog posts more often
+        if (new RegExp(`${LIVE_URL}/blog/?$`).test(item.url)) {
+          item.changefreq = 'daily';
+          item.priority = 0.8;
+        }
+
+        return item;
+      },
+    }),
     tailwind({
       config: { applyBaseStyles: false },
     }),
