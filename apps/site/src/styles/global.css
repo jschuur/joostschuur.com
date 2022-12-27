@@ -102,6 +102,11 @@
     color: theme('colors.text.selection');
   }
 
+  /* center images in blog posts */
+  article * > img {
+    margin: auto;
+  }
+
   /* ------ GLOBAL STYLES - END ------ */
 
   /* ------ REUSABLE UTILS - START ------ */
