@@ -65,3 +65,7 @@
 .fa-envelope::before {
   content: '\f0e0';
 }
+
+.fa-square-rss::before {
+  content: '\f143';
+}
