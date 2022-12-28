@@ -1,6 +1,7 @@
 ---
+import { FEATURED_POST_COUNT } from '../config';
 import { readAll } from '../lib/markdoc/read';
-import PostList from './PostList.astro';
+import PostCard from './PostCard.astro';
 
 const posts = await readAll({
   directory: 'blog',
@@ -9,11 +10,13 @@ const posts = await readAll({
 const featuredPosts = posts
   .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
   .filter(post => post.frontmatter.featured === true)
-  .slice(0, 5);
+  .slice(0, FEATURED_POST_COUNT);
 ---
 
 <section class="mb-8">
   <h2 class="text-xl font-bold mb-4">Featured Posts</h2>
 
-  <PostList posts={featuredPosts} />
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {featuredPosts.map(post => <PostCard post={post} />)}
+  </div>
 </section>

@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
 export const TWITTER_HANDLE = '@joostschuur';
 export const MY_NAME = 'Joost Schuur';
 export const GOOGLE_ANALYTICS_ID = 'G-3GLM22RF0C';
+export const FEATURED_POST_COUNT = 4;
 
 // setup in astro.config.mjs
 const BASE_URL = new URL(import.meta.env.SITE);

@@ -1,0 +1,28 @@
+---
+const {
+  post: { frontmatter, slug },
+} = Astro.props;
+
+const { title, date, description } = frontmatter;
+const formattedDate = new Date(date).toLocaleDateString('en-us', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<div
+  class="bg-orange-200 dark:bg-yellow-50 dark:text-slate-800 p-4 rounded-md flex flex-col shadow-md hover:scale-105 ease-in-out duration-250 transition"
+>
+  <a class="unset" href={`/blog/${slug}`}>
+    <div class="text-xl mb-2">
+      {title}
+    </div>
+    <div class="text-sm flex-grow">
+      {description}
+    </div>
+    <div class="text-xs grow text-right mt-2">
+      <time datetime={date.toISOString()}>{formattedDate}</time>
+    </div>
+  </a>
+</div>
