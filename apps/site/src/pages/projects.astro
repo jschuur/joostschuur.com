@@ -31,7 +31,7 @@ const sortedProjects = projects.sort(
                 <a href={project.frontmatter.url} target="_blank" class="hover:text-text-link">
                   <span>{project.frontmatter.title}</span>
                 </a>
-                :<span>{project.frontmatter.description}</span>
+                : <span>{project.frontmatter.description}</span>
               </div>
               <div class="text-text-muted text-sm italic">
                 <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
