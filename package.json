@@ -11,7 +11,7 @@
     "format": "turbo run format"
   },
   "keywords": [],
-  "author": "Joost Schuur <jschuur@jschuur.com",
+  "author": "Joost Schuur <jschuur@jschuur.com>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.30.0",
